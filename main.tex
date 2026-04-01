@@ -1,0 +1,89 @@
+\documentclass[12pt,
+               phd,
+               doublespacing
+               ]{ncsuthesis}
+
+
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{glossaries}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{fit}
+\usetikzlibrary{shadows}
+\usepackage[backend=biber]{biblatex}
+\usepackage{float}
+\usepackage[inkscapelatex=false]{svg}
+
+
+\newacronym{tc}{TC}{Template Concept}
+
+
+\dispositionformat{\bfseries}
+\headingformat{\large\MakeUppercase}
+\frenchspacing
+\include{optional}
+
+
+\committeesize{4}
+\chair{Dr. Committee Chair}
+\memberI{Dr. Committee Member I}
+\memberII{Dr. Committee Member II}
+\memberIII{Dr. Committee Member III}
+
+
+\student{Student First Name}{Student Last Name}
+\program{Program Name}
+\thesistitle{Your Thesis Title Goes Here}
+
+
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}}
+\newcommand{\bo}{\ensuremath{\mathbf{\Omega}}}
+\newcommand{\eref}[1]{Eq.~\ref{#1}}
+\newcommand{\fref}[1]{Fig.~\ref{#1}}
+\newcommand{\tref}[1]{Table~\ref{#1}}
+\addbibresource{bibliography.bib}
+
+
+\begin{document}
+\frontmatter
+\include{front}
+\mainmatter
+
+
+\include{1-introduction/_}
+\include{2-literature-review/_}
+\include{3-methodology/_}
+\include{4-implementation/_}
+\include{5-experimental-evaluation/_}
+\include{6-conclusion-and-future-work/_}
+
+
+\printbibliography[
+heading=bibintoc,
+title={References}
+]
+
+
+\restoregeometry
+\appendix
+\include{appendix/_}
+\restoregeometry
+\backmatter
+
+
+\end{document}

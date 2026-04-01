@@ -1,0 +1,18 @@
+\chapter{Experimental Evaluation}
+\label{chap:experiments}
+
+\section{Experiment Setup}
+This section describes the experimental design and setup used to evaluate the framework. Reference to datasets, metrics, and protocols can be described here.
+
+\subsection{Metrics and Indicators}
+Speedup $S(N)$ for $N$ workers is an example of an evaluation metric defined as:
+
+\begin{equation}
+  \label{eq:example-equation}
+  S(N) = \frac{T_{\text{serial}}}{T_{\text{parallel}}(N)}
+\end{equation}
+
+where $T_{\text{serial}}$ is the processing time of the serial run, and $T_{\text{parallel}}(N)$ is the time for the distributed run. 
+
+\section{Results and Discussion}
+The obtained speedup was collected and analyzed across multiple runs. In the evaluation phase, it is also useful to compare these findings to the state of the art results mentioned in Chapter \ref{chap:literature-review}.

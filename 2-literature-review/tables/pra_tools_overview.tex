@@ -1,0 +1,42 @@
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash\hsize=#1\hsize}X}
+\begin{landscape}
+\begin{table}
+\centering
+\begin{threeparttable}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{Example table showcasing the use of landscape, threeparttable, tabularx, and custom columns.}
+\label{tab:example_overview}
+
+\begin{tabularx}{\textwidth}{@{} L{1.20} L{1.30} L{0.60} L{1.55} L{0.85} @{}}
+\toprule
+\textbf{Item} &
+\textbf{Category} &
+\textbf{Type} &
+\textbf{Description} &
+\textbf{Status} \\
+\midrule
+
+Item A &
+Category 1 &
+Type X &
+Description of Item A &
+Active\tnote{*} \\
+
+Item B &
+Category 2 &
+Type Y &
+Description of Item B &
+Inactive \\
+
+\bottomrule
+\end{tabularx}
+
+\begin{tablenotes}
+  \item[*] Example footnote explaining the active status.
+\end{tablenotes}
+
+\end{threeparttable}
+\end{table}
+\end{landscape}
